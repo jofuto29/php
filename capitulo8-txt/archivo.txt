@@ -1,0 +1,3 @@
+cosas que pongo aqui.
+otras cosas mas
+cada linea sera una posicion dentro del array de file

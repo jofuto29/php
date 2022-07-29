@@ -1,0 +1,35 @@
+/* CSS Document */
+body{
+	font-family:"Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-align:center;
+    background-color: chartreuse;
+}
+
+#contenedor{
+	margin:0 auto;
+	width:600px;
+	border:1px solid black;
+}
+
+#encabezado,#pie{
+	height:1.5em;
+	background-color:#FC0;
+	clear:both; /*para que contenga los bloques flotantes*/
+}
+
+#botonera{
+	width:25%;
+	background-color:#FFC;
+	float:right;
+	height:200px;
+	line-height:200px;
+}
+
+#contenidoPrincipal{
+	width:75%;
+	background-color:#FFF;
+	float:right;
+	height:200px;
+	line-height:200px;
+}
