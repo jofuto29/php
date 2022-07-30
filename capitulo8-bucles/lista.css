@@ -3,6 +3,10 @@
     color: #fff;
 }
 
+.puntitos{
+    text-align: center;
+}
+
 p{
     text-align: center;
 }
@@ -14,4 +18,3 @@ table{
     border: 1px solid #CCC;
     border-radius: 1em;
 }
-
