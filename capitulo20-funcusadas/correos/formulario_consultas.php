@@ -22,7 +22,7 @@ para evitar estos problemas podemos hacer 2 cosas:
 CASOS PRACTICOS:
 */
 
-$destino = "llocalhost9@gmail.com";
+$destino = "llocalhost9@localhost.com";
 if(mail($destino, $_POST["asunto"], $_POST["mensaje"])){
     print("<p> muchas gracias por su mensaje </p>");
 }else{

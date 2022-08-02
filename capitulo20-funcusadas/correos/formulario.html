@@ -6,12 +6,25 @@
     </head>
 
     <body>
-        <form action="mail.php" method="post"> <!-- action indica la url donde se enviaran los datos mientras que method, le a http que metodo se utilizara-->
+        <form action="formulario_consultas.php" method="post"> <!-- action indica la url donde se enviaran los datos mientras que method, le a http que metodo se utilizara-->
             <p>FORMULARIO ENVIO CORREO ELECTRONICO PARA CONSULTA</p>
             <fieldset>
                 <legend>CONSULTAS</legend>
-                <p><label>tema de la consulta: <input type="text" name="asunto"></label></p>
-                <p><label>mensaje de la consulta: <input type="text" name="mensaje"></label></p>
+                <p><label>Tema de la consulta: <input type="text" name="asunto"></label></p>
+                <p><label>Mensaje de la consulta: <input type="text" name="mensaje"></label></p>
+                <input type="submit" value="enviar">
+            </fieldset>
+        </form>
+
+        <br><br><br>
+
+        <form action="recomendarPag.php" method="post">
+            <p>FORMULARIO RECOMENDAR PAGINA</p>
+            <fieldset>
+                <legend>CONSULTAS</legend>
+                <p><label>Nombre: <input type="text" name="nombre"></label></p>
+                <p><label>Nombre de la persona a la que recomiendas esta pagina: <input type="text" name="nombre_p"></label></p>
+                <p><label>direccion de correo de esa persona: <input type="text" name="email"></label></p>
                 <input type="submit" value="enviar">
             </fieldset>
         </form>
