@@ -23,5 +23,63 @@ function consultar($enlace,$consulta){
 
 //FUNCIONES PARA MOSTRAR EL RESULTADO DE LAS CONSULTAS------------------------------------------------------------------
 
+function generarMenuSeleccion($datos,$name,$label){
+    $codigo = "<label>".$label."</label>"."\n";
+    $codigo = $codigo.'<select name="'.$name.'">'."\n";
+
+    while($fila = mysqli_fetch_array($datos)){
+        $codigo = $codigo.'<option value="'.$fila["id"].'">'.$fila["nombre"].'</option>'."\n"; //el el libro recomienda utilizar utf8_encode() para los nombre pero si lo hago de esta manera sucede lo contrario a lo que deberia suceder
+    }
+    $codigo = $codigo."</select>"."\n";
+    return $codigo;
+}
+
+
+
+function tablear($datos){
+    $codigo = '<table border="1" cellpadding="3">';
+    while($fila = @mysqli_fetch_array($datos)){
+        $codigo .= '<tr>';
+        $codigo .= '<td>'.$fila["id"].'</td>';
+        $codigo .= '<td>'.$fila["nombre"].'</td>';
+        $codigo .= '<td>'.$fila["apellido"].'</td>';
+        $codigo .= '<td>'.$fila["edad"].'</td>';
+        $codigo .= '<td>'.$fila["pais"].'</td>';
+        $codigo .= '<td>'.$fila["especialidad"].'</td>';
+        $codigo .= '</tr>';
+    }
+    $codigo .= '</table>';
+    return $codigo;
+}
+
+
+
+function crearRadios($datos,$leyenda,$name){
+    $codigo = '<fieldset><legend>'.$leyenda.'</legend>'."\n";
+
+    while($fila = @mysqli_fetch_array($datos)){
+        $codigo .= '<label>'.$fila["nombre"];
+        $codigo .= '<input type="radio" name="'.$name.'" id="dato'.$fila["id"].'">'."\n";
+        $codigo .= '</label><br>'."\n";
+    }
+    return $codigo.'</fieldset>'."\n";
+}
+
+
+
+function verificacion($datos,$leyenda){
+    $codigo = '<fieldset><legend>'.$leyenda.'</legend>'."\n";
+
+    while($fila = @mysqli_fetch_array($datos)){
+
+        $codigo .= '<label>'.$fila["nombre"];
+        $codigo .= '<input type="checkbox" name="'.$fila["id"].'" id="dato'.$fila["id"].'">'."\n";
+        $codigo .= '</label><br>'."\n";
+    }
+    return $codigo.'</fieldset>'."\n";
+}
+
+
+
 
 ?>
