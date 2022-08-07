@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>CONSULTA</title>
+        <meta http-equiv="Content-Type" content="Type=text/html; charset=utf-8" />
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+
+    <body>
+        <form action="agregar.php" method="post"> <!-- action indica la url donde se enviaran los datos mientras que method, le a http que metodo se utilizara-->
+        <fieldset>
+            <legend>INGRESE SU CONSULTA</legend>
+            <ul>
+                <p>
+                    <label> Escriba su nombre a continuacion: </label>
+                    <input type="text" name="name"> 
+                </p>
+                <p>
+                    <label> Escriba su correo electronico:</label>
+                    <input type="text" name="mail">
+                </p>
+                <p>
+                    <label> Escriba su mensaje a continuacion: <br><textarea name = "msj" cols="30" rows="5"></textarea> </label>
+                </p>
+
+                <br><br>
+                <p>
+                    <input type="submit" value="enviar">
+                </li>
+            </ul>
+        </fieldset>
+        </form>
+    </body>
+</html>
