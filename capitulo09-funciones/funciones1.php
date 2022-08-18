@@ -33,7 +33,7 @@ vemos que es probable que tengamos que repetir algunas tareas un y otra vez en d
             echo "<p>no se pudo validar la casilla correctamente </p>";
         }
     } else {
-        echo "<p>los datos necesarios no llegaron correctamente </p>"
+        echo "<p>los datos necesarios no llegaron correctamente </p>";
     }
 
     //ahora bien, para que este codigo funcione, seria necesario definir las funciones comprobar_casilla y escribirarchivo.
